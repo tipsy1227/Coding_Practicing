@@ -8,8 +8,8 @@ Exercise1-1.c:2:1: warning: type specifier missing, defaults to 'int' [-Wimplici
 main(){\
 ^
 
-雖然這個警告並不影響編譯器產生執行檔也不會導致程式執行錯誤，不過我之後都會在main()前面
-加上"int"來去除這個警告。加上int將會使得這個函數定義更完整，也更清晰。
+雖然這個警告並不影響編譯器產生執行檔也不會導致程式執行錯誤，但是我之後都會在main()前面
+加上"int"來去除這個警告。而且加上"int"將會使得這個函數的定義更完整，也更清晰。
 
 **Brief explination**\
 If your code is same as the code in KR, you may find the following "warning":
