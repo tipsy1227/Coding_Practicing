@@ -1,4 +1,4 @@
-**Exercise1-2.** Experiment to find out what happens when printf's argument string contains \c, where c is some character not listed above.
+**Exercise 1-2.** Experiment to find out what happens when printf's argument string contains \c, where c is some character not listed above.
 
 **筆記:**
 這個程式寫了一個未定義的跳脫字元'\c'，我在編譯時跑出了下面的"警告":
