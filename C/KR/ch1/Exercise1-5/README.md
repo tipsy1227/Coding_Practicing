@@ -20,5 +20,5 @@ the one should be  aware of is the expression in the argument list of printf:
 Although the right-hand side of the \* is an integer expression, the other side
 of the \* is a floating-point expression. So the compiler will treat the result
 of the whole expression as a float.(that's why we use %f) In other words, the
-compiler will convert the type with less precision and small range into the type
+compiler will convert the type with less precision and smaller range into the type
 with more precision and larger range(e.g. short\<int\<float\<double).
