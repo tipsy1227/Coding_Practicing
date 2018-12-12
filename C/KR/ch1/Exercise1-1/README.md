@@ -19,5 +19,5 @@ main(){
 ^
 </pre>
 Although the warning didn't make the compiler failing to generate an executable file and
-didn't affect the result during execution, I will add an "int" before the main() to make
-this definition of function more clear and complete.
+didn't affect the result during execution, I will add an "int" before the main() from now
+on to make this definition of function more clear and complete.

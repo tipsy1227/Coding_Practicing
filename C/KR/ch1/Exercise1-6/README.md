@@ -10,7 +10,7 @@ getchar()拿到的字元要嘛是EOF(End-of-file)，要嘛不是EOF，只有兩�
 (p.s. 在linux, MacOs這些Unix-like的系統上，EOF的輸入為ctrl+d；而在Windows系統上，
 EOF的輸入則為ctrl+z)
 
-**Brief explination**\
+**Brief explination:**\
 getchar()！=EOF is a relational expression. Its result is either True or False.
 In this case, the character getchar() takes in is either EOF(End-of-file) or not
 EOF. There are only two possibilities. Moreover, relational expressions in C use
