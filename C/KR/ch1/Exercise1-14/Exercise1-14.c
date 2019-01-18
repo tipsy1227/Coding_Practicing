@@ -5,8 +5,9 @@
 /*print a histogram of the frequencies of characters*/
 int main(){
 	int c, freq[MAXCHAR];
+	int i;
 
-	for(int i=0; i<MAXCHAR; i++)
+	for(i=0; i<MAXCHAR; i++)
 		freq[i] = 0;
 
 	while((c=getchar()) != EOF){
@@ -16,11 +17,12 @@ int main(){
 			freq[p]++;
 	}
 
-	for(int i=0; i<MAXCHAR; i++){
-		int f;
+	for(i=0; i<MAXCHAR; i++){
+		int j, f;
+
 		if((f=freq[i])>0){
 			printf("%c: ", i+32);
-			for(int j=0; j<f; j++)
+			for(j=0; j<f; j++)
 				putchar('*');
 			putchar('\n');
 		}

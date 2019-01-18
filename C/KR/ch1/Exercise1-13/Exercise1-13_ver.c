@@ -7,10 +7,10 @@
 
 /*print a histogram of the lengths of words in its input.(vertical version)*/
 int main(){
-	int c, state, max_len, nw;
+	int c, state, max_len, nw, i;
 	int len[MAXWORD];
 
-	for(int i=0; i<MAXWORD; i++)
+	for(i=0; i<MAXWORD; i++)
 		len[i] = 0;
 
 	max_len = nw = 0;
@@ -28,8 +28,10 @@ int main(){
 		}
 
 	//print histograms
-	for(int i=0; i<max_len; i++){
-		for(int j=0; j<nw; j++)
+	for(i=0; i<max_len; i++){
+		int j;
+
+		for(j=0; j<nw; j++)
 			if(i<len[j])
 				putchar('*');
 			else
