@@ -25,4 +25,4 @@ It means that getline is redefined. In that case, I change all getline in Exerci
 to solve this problem.\
 In Exercise1-16.c, note the logic expression i\<lim-2 at the 29th row. Cause the last character in a 
 string should be '\0', in array s, there is at most lim-1 character, which means i is lim-2.So I change
-the i\<lim-1 in the original program which doesn't consider the input is too much to i<lim-2.
+the i\<lim-1 in the original program which doesn't consider the input being too much to i<lim-2.
