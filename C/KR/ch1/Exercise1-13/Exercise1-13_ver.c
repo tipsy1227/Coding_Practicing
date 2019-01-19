@@ -3,9 +3,9 @@
 #define IN 1
 #define OUT 0
 
-#define MAXWORD 10000	/*maximum number of words*/
+#define MAXWORD 10000	/* maximum number of words */
 
-/*print a histogram of the lengths of words in its input.(vertical version)*/
+/* print a histogram of the lengths of words in its input.(vertical version) */
 int main(){
 	int c, state, max_len, nw, i;
 	int len[MAXWORD];

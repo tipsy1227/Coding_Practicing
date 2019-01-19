@@ -11,6 +11,7 @@ int main(){
 	int fahr;
 	for(fahr=LOWER; fahr<=UPPER; fahr=fahr+STEP)
 		printf("%3d %6.1f\n", fahr, f2c(fahr));
+	return 0;
 }
 
 float f2c(int f){

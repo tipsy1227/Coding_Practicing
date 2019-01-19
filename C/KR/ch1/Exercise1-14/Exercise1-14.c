@@ -2,7 +2,7 @@
 
 #define MAXCHAR 95
 
-/*print a histogram of the frequencies of characters*/
+/* print a histogram of the frequencies of characters */
 int main(){
 	int c, freq[MAXCHAR];
 	int i;
