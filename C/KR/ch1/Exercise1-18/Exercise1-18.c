@@ -38,6 +38,7 @@ int mygetline(char s[], int lim){
 	return i;
 }
 
+/* remove_trail: remove trailing blanks and tabs */
 void remove_trail(char s[]){
 	int end, c, i;
 	//find the end of this line
