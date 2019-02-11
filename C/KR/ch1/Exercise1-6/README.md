@@ -1,4 +1,4 @@
-**Exercise 1-6** Verify the expression getchar()!=EOF is 0 or 1.
+**Exercise 1-6.** Verify the expression getchar()!=EOF is 0 or 1.
 
 **筆記:**\
 getchar()!=EOF 是一個關係運算式，他的結果要嘛成立，要嘛就是不成立。以這個運算式來舉例，

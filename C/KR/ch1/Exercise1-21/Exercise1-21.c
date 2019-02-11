@@ -4,6 +4,7 @@
 
 int nextpos(int pos); /* nextpos: make the pos loop from 1 to 8 */
 
+/* replaces strings of blanks by the minimum number of tabs and blanks to achieve the same spacing */
 int main(){
 	int c, nb, pos;
 

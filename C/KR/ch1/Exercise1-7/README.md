@@ -1,4 +1,4 @@
-**Exercise 1-7** Write a program to print the value of EOF.
+**Exercise 1-7.** Write a program to print the value of EOF.
 
 **筆記:**\
 Exercise1-7.c這個程式的執行結果會是-1, 換句話說，以二進位的角度來看，EOF的編碼即是一個全都是1的二進位數字。

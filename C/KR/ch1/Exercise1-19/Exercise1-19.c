@@ -4,15 +4,16 @@
 
 int mygetline(char line[], int maxline);    /* mygetline: read a line into s, return length */
 void reverse(char []);                      /* reverse: reverse string s */
-void swap(char [], int, int);               /* swap: swap two character s[i], s[j] in string s */
+void swap(char s[], int i, int j);          /* swap: swap two character s[i], s[j] in string s */
 
 
 /* print lines which are longer than 80 */
 int main(){
-	int len;	/* current line length */
+	int len;	            /* current line length */
 	char line[MAXLINE];		/* current input line */
 
 	while((len=mygetline(line, MAXLINE))>0){
+		printf("%d\n", len);
 		reverse(line);
 		printf("%s\n", line);
 	}
@@ -36,14 +37,17 @@ int mygetline(char s[], int lim){
 		c=getchar();
 		i++;
 	}
+	if(c == '\n')
+		++i;
 	return i;
 }
 
 void reverse(char s[]){
 	int i, j;
 
-	for(i=0; s[i+1]!='\0'; i++)
+	for(i=0; s[i]!='\0'; i++)
 		;
+	--i;
 	j=0;
 
 	// swap the first and the last, the second and the second-last, and so on

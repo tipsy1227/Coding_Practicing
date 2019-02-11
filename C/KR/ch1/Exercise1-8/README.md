@@ -1,4 +1,4 @@
-**Exercise 1-8** Write a program to count blanks, tabs, and newlines.
+**Exercise 1-8.** Write a program to count blanks, tabs, and newlines.
 
 **筆記:**\
 我們只需要在前面的範例程式碼再加上一點東西就可以把這個程式寫出來，注意到在Exercise1-8.c裡，
