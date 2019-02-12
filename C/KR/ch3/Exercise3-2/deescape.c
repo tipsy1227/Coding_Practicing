@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXLINE 1000
+#define MAXLINE 1000    /* maximum input line size */
 
 int mygetline(char line[], int maxline);    /* mygetline: read a line into s, return length */
 void deescape(char s[], char t[]);          /* deescape: converts \n and \t into newline and tab */
