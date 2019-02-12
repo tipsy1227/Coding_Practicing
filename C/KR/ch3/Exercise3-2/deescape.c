@@ -3,16 +3,16 @@
 #define MAXLINE 1000
 
 int mygetline(char line[], int maxline);    /* mygetline: read a line into s, return length */
-void escape(char s[], char t[]);            /* escape: converts newline and tab into visible escape \n and \t */
+void deescape(char s[], char t[]);          /* deescape: converts \n and \t into newline and tab */
 
-/* copies input to output and converts newline and tab into \n and \t */
+/* copies input to output and converts \n and \t into newline and tab */
 int main(){
 	int c, len;
 	char s[MAXLINE], t[MAXLINE];
 
 	while((len=mygetline(s, MAXLINE))>0){
-		escape(s, t);
-		printf("%s\n", t);
+		deescape(s, t);
+		printf("%s", t);
 	}
 	return 0;
 }
@@ -37,22 +37,28 @@ int mygetline(char s[], int lim){
 	return i;
 }
 
-void escape(char s[], char t[]){
-	int c, i, j;
+void deescape(char s[], char t[]){
+	int c, i, j, isescape;
 
+	isescape = 0;
 	for(i=j=0; (c=s[i])!='\0'; i++)
-		switch(c){
-			case '\n':
-				t[j++] = '\\';
-				t[j++] = 'n';
-				break;
-			case '\t':
-				t[j++] = '\\';
-				t[j++] = 't';
-				break;
-			default:
-				t[j++] = c;
-				break;
-		}
+		if(isescape){
+			switch(c){
+				case 'n':
+					t[j++] = '\n';
+					break;
+				case 't':
+					t[j++] = '\t';
+					break;
+				default:
+					t[j++] = '\\';
+					t[j++] = c;
+					break;
+			}
+			isescape = 0;
+		} else if(c == '\\')
+			isescape = 1;
+		else
+			t[j++] = c;
 	t[j] = '\0';
 }
