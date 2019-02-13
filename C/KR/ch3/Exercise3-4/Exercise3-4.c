@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 void itoa(int n, char s[]);    /* itoa: convert n to characters in s */
-void reverse(char s[]);
-int absolute(int n);
+void reverse(char s[]);        /* reverse: reverse the string s */
+int absolute(int n);           /* absolute: return the absolute value of integer n */
 
+/* convert a number into string */
 int main(){
 	int n;
 	char s[12];

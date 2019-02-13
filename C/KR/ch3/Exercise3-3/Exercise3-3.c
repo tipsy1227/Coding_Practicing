@@ -6,6 +6,7 @@
 void expand(char s1[], char s2[]);    /* expand: expands shorthand notations like a-z int the string s1 into
                                          equivalent complete list abc...xyz in s2 */
 
+/* copies its input to output and expand it */
 int main(){
 	int c, i;
 	char s[MAXBUF], t[MAXBUF/3*26+MAXBUF%3];
