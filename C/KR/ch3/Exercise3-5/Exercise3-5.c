@@ -41,10 +41,10 @@ void itob(int n, char s[], int b){
 void reverse(char s[]){
 	int i, j;
 	char tmp;
-	for(i=j=0; s[j]!='\0'; ++j)
+	for(i=j=0; s[j]!='\0'; j++)
 		;
-	--j;
-	for(; i<j; ++i, --j)
+	j--;
+	for(; i<j; i++, j--)
 		tmp=s[i], s[i]=s[j], s[j]=tmp;    /* swap s[i] and s[j] */
 }
 
