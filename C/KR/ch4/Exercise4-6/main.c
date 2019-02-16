@@ -11,11 +11,15 @@ double pop(void);
 
 /* reverse Polish calculator */
 int main(){
-	int type;
-	double op2;
+	int type, enc_var=-1;
+	double op2, var[26]={0}, r;
 	char s[MAXOP];
 
 	while((type=getop(s)) != EOF){
+		if(enc_var && type!='='){
+			push(var[enc_var-'A']);
+			enc_var = 0;
+		}
 		switch(type){
 		case NUMBER:
 			push(atof(s));
@@ -37,18 +41,23 @@ int main(){
 			else
 				printf("error: zero divisor\n");
 				break;
-		case 's':
-			push(sin(pop()));
+		case '=':
+			if(enc_var){
+				push(var[enc_var-'A']=pop());
+				enc_var = 0;
+			}else
+				printf("error: invalid use of '='\n");
 			break;
-		case 'e':
-			push(exp(pop()));
+		case 'A': case 'B': case 'C': case 'D': case 'E': case 'F': case 'G': case 'H': case 'I': case 'J':
+		case 'K': case 'L': case 'M': case 'N': case 'O': case 'P': case 'Q': case 'R': case 'S': case 'T':
+		case 'U': case 'V': case 'W': case 'X': case 'Y': case 'Z':
+			enc_var = type;
 			break;
-		case 'p':
-			op2 = pop();
-			push(pow(pop(), op2));
+		case 'r':
+			push(r);
 			break;
 		case '\n':
-			printf("\t%g\n", pop());
+			printf("\t%g\n", r=pop());
 			break;
 		default:
 			printf("error: unknown command %s\n", s);
