@@ -44,16 +44,16 @@ void deescape(char s[], char t[]){
 	for(i=j=0; (c=s[i])!='\0'; i++)
 		if(isescape){
 			switch(c){
-				case 'n':
-					t[j++] = '\n';
-					break;
-				case 't':
-					t[j++] = '\t';
-					break;
-				default:
-					t[j++] = '\\';
-					t[j++] = c;
-					break;
+			case 'n':
+				t[j++] = '\n';
+				break;
+			case 't':
+				t[j++] = '\t';
+				break;
+			default:
+				t[j++] = '\\';
+				t[j++] = c;
+				break;
 			}
 			isescape = 0;
 		} else if(c == '\\')

@@ -42,17 +42,17 @@ void escape(char s[], char t[]){
 
 	for(i=j=0; (c=s[i])!='\0'; i++)
 		switch(c){
-			case '\n':
-				t[j++] = '\\';
-				t[j++] = 'n';
-				break;
-			case '\t':
-				t[j++] = '\\';
-				t[j++] = 't';
-				break;
-			default:
-				t[j++] = c;
-				break;
+		case '\n':
+			t[j++] = '\\';
+			t[j++] = 'n';
+			break;
+		case '\t':
+			t[j++] = '\\';
+			t[j++] = 't';
+			break;
+		default:
+			t[j++] = c;
+			break;
 		}
 	t[j] = '\0';
 }
