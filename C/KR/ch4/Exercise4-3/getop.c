@@ -17,7 +17,8 @@ int getop(char s[]){
 		return c;    /* not a number */
 	if(c=='+' || c=='-'){
 		d = c;
-		ungetch(c=getch());
+		if((c=getch()) != EOF)
+			ungetch(c);
 		if(!isdigit(c))
 			return d;
 	}
