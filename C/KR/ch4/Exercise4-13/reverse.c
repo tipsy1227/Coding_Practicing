@@ -1,16 +1,6 @@
-#include <stdio.h>
+#include "reverse.h"
 
-void reverse(char []);
-void swap(char [], int i, int j);
-
-int main(){
-	char s[100] = "!dlrow ,olleH";
-
-	reverse(s);
-	printf("%s\n", s);
-	return 0;
-}
-
+/* reverse: reverse string s */
 void reverse(char s[]){
 	static int i = 0, j = 0;
 	char tmp;

@@ -1,18 +1,14 @@
-#include <stdio.h>
 #include <string.h>
-#include "swap.h"
 
-void reverse(char []);
-
-int main(){
-	char s[100] = "!dlrow ,olleH";
-
-	reverse(s);
-	printf("%s\n", s);
-
-	return 0;
+/* swap: swap the position i j in s */
+#define swap(s, i, j)    \
+{                        \
+	int tmp = s[i];      \
+	s[i] = s[j];         \
+	s[j] = tmp;          \
 }
 
+/* reverse: reverse string s */
 void reverse(char s[]){
 	int i, j, len = strlen(s);
 
