@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include "getint.h"
 
-#define MAXBUF 100
-
 int main(){
-	int n, i;
-	char buf[MAXBUF];
+	int n;
 
 	if(getint(&n) > 0)
 		printf("%d\n", n);

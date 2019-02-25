@@ -8,7 +8,7 @@ int getint(int *pn){
 
 	while(isspace(c=getch()))    /* skip white space */
 		;
-	if((c=='+'||c=='-')){
+	if(c=='+'||c=='-'){
 		if(!isdigit(d=getch())){
 			ungetch(d);
 			ungetch(c);
