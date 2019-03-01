@@ -13,10 +13,11 @@ int main(){
 
 /* mystrcat: copies the string t to the end of s, return the address of the resulting string */
 char *mystrcat(char *s, char *t){
-	char *u = s;
-	for(;*u!='\0'; u++)
+	int i, j;
+
+	for(i=0; s[i]!='\0'; i++)
 		;
-	while((*u=*t)!='\0')
-		++u, ++t;
+	for(j=0; (s[i+j]=t[j])!='\0'; j++)
+		;
 	return s;
 }

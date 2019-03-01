@@ -17,23 +17,26 @@ int main(){
 
 void itoa(int n, char s[]){
 	int i, sign;
+	char *t = s;
 
 	sign = n;    /* record sign */
 	i = 0;
 	do{    /* generate digits in reverse order */
-		s[i++] = absolute(n%10)+'0';    /* get next digit */
+		*t++ = absolute(n%10)+'0';    /* get next digit */
 	} while((n/=10) != 0);    /* delete it */
 	if(sign < 0)
-		s[i++] = '-';
-	s[i] = '\0';
+		*t++ = '-';
+	*t = '\0';
 	reverse(s);
 }
 
 void reverse(char s[]){
-	int i, j;
-	char tmp;
-	for(i=0, j=strlen(s)-1; i<j; i++, j--)
-		tmp=s[i], s[i]=s[j], s[j]=tmp;    /* swap s[i] and s[j] */
+	char *t;
+
+	for(t=s; *t!='\0'; t++)
+		;
+	for(t=t-1; s<t; s++, t--)
+		tmp=*s, *s=*t, *t=tmp;    /* swap *s and *t */
 }
 
 int absolute(int n){
