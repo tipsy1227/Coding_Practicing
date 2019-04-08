@@ -13,7 +13,7 @@ int getop(char s[]){
 	while((s[0]=c=getch())==' ' || c=='\t')
 		;
 	s[1] = '\0';
-	if(!isdigit(c) && c!='.' && c!='+' && c!='-')
+	if(!isdigit(c) && c!='+' && c!='-')
 		return c;    /* not a number */
 	if(c=='+' || c=='-'){
 		d = c;
